@@ -54,3 +54,35 @@
 //     alert(word[letterIndex - 1]);
 //   }
 // }
+
+//* Задача №3
+// const a = [1, 2, 3]
+// const b =[5, [6, 7]]
+// const c = 4
+// //[1, 2, 3, 4, 5, 6, 7]
+// const d = [...a, c, b[0], ...b[1]];
+
+// console.log(d)
+
+//* Задача №4
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// //[1, 2, 3, 0, 0, 0, 7]
+// // array.splice(3, 3, 0, 0, 0);
+// array.fill(0, 3, 6);
+// console.log(array)
+
+//* Задача №5
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// //[1,2,3,1,2,3,7]
+// array.copyWithin(3, 0, 3);
+// console.log(array)
+
+//* Задача №6
+// const array = [1, 4, 4, 6, 7, 4, 6, 8];
+// let indx;
+// for (let i = 0; i < array.length; i += 1) {
+//   if (array[i] === 4) {
+//     indx = i;
+//   }
+// }
+// console.log(indx);
