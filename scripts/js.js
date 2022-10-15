@@ -163,3 +163,12 @@
 // *Задача №5
 // getSums([1, 2, 3, 4, 5]);
 // [1, 3, 6, 10, 15]
+
+// const getSums = (array) =>
+//     array.reduce(
+//         (acc, el, i) =>
+//             i < 1 ? acc.concat(array[i]) : acc.concat(acc[i - 1] + array[i]),
+//         []
+//     );
+
+// console.log('😼 ~ ', getSums([1, 2, 3, 4, 5]));
