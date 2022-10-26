@@ -18,29 +18,30 @@ import 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
 
 // * Task 5
 
-// const objIsEqual = (firstObject, secondObject) =>
 // ? 1 option
-//     // JSON.stringify(firstObject) === JSON.stringify(secondObject);
+// const objIsEqual = (firstObject, secondObject) =>
+// JSON.stringify(firstObject) === JSON.stringify(secondObject);
 // ? 2 option
-// _.isEqual(firstObject, secondObject);
+// const objIsEqual = (firstObject, secondObject) =>
+//     _.isEqual(firstObject, secondObject);
 // ? 3 option
-//     {
-//         const keys1 = Object.keys(firstObject);
-//         const keys2 = Object.keys(secondObject);
+// const objIsEqual = (firstObject, secondObject) => {
+//     const keys1 = Object.keys(firstObject);
+//     const keys2 = Object.keys(secondObject);
 
-//         if (keys1.length !== keys2.length) {
+//     if (keys1.length !== keys2.length) {
+//         return false;
+//     }
+
+//     for (let i = 0; i < keys1.length; i += 1) {
+//         const key = keys1[i];
+
+//         if (firstObject[key] !== secondObject[key]) {
 //             return false;
 //         }
+//     }
 
-//         for (let i = 0; i < keys1.length; i += 1) {
-//             const key = keys1[i];
-
-//             if (firstObject[key] !== secondObject[key]) {
-//                 return false;
-//             }
-//         }
-
-//         return true;
+//     return true;
 // };
 // const data = { a: 1, b: 1 };
 // const data2 = { a: 1, b: 1 };
