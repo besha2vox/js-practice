@@ -1,20 +1,51 @@
-import 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
+// import 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
+
+// const { isEmpty } = require("lodash");
 
 // * Task 4
 
-// const isEmpty = (object) => {
-//     const keys = Object.keys(object);
-//     return (
-//         object[keys[0]] === undefined ||
-//         object[keys[0]] === null ||
-//         object[keys[0]] === ''
-//     );
+const isEmptyDeep = (object) => {
+    if (typeof object === 'object') {
+        const keys = Object.keys(object);
+        for (const key of keys) {
+            if (typeof object[key] !== 'object' || object[key] === null) {
+                const isEmpty =
+                    object[key] === undefined ||
+                    object[key] === null ||
+                    object[key] === '' ||
+                    Number.isNaN(object[key]);
+                console.log('isEmpty', isEmpty);
+                return isEmpty;
+            } else {
+                isEmptyDeep(object[key]);
+            }
+        }
+    }
+};
+
+console.log(isEmptyDeep({ a: 1, b: undefined }));
+console.log(isEmptyDeep({ a: undefined }));
+console.log(isEmptyDeep({ a: 'lol' }));
+console.log(isEmptyDeep({ a: null }));
+console.log(isEmptyDeep({ a: { b: undefined } }));
+console.log(isEmptyDeep({ a: { b: 1 } }));
+
+// * Task 6
+// const invoke = (object, path, func, args) => {
+//     const pathArray = path.split('.');
+//     let newObj = {};
+//     for (const el of pathArray) {
+//         if (newObj[el] === undefined) {
+//             newObj = object[el];
+//         } else {
+//             newObj = newObj[el];
+//         }
+//     }
+//     return Array.prototype[func].apply(newObj, args);
 // };
 
-// console.log(isEmpty({ a: 1, b: undefined }));
-// console.log(isEmpty({ a: undefined }));
-// console.log(isEmpty({ a: 0 }));
-// console.log(isEmpty({ a: null }));
+// const data = { a: { b: { c: [1, 2, 3] } } };
+// console.log(invoke(data, 'a.b.c', 'splice', [1, 2])); // [2, 3]
 
 // * Task 5
 
@@ -48,21 +79,3 @@ import 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
 // const data3 = { a: 1, b: 2 };
 // console.log(objIsEqual(data, data2)); // true
 // console.log(objIsEqual(data, data3)); // false
-
-// * Task 6
-// const invoke = (object, path, func, args) => {
-//     const pathArray = path.split('.');
-//     let newObj = {};
-//     for (const el of pathArray) {
-//         if (newObj[el] !== undefined) {
-//             newObj = newObj[el];
-//         } else {
-//             newObj = object[el];
-//         }
-//     }
-
-//     return Array.prototype[func].apply(newObj, args);
-// };
-
-// const data = { a: { b: { c: [1, 2, 3] } } };
-// console.log(invoke(data, 'a.b.c', 'splice', [1, 2])); // [2, 3]
