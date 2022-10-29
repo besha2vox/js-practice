@@ -1,6 +1,6 @@
 # js-practice
 
-You should create a function constructor **'FrontendLab'** which you can call with two arguments students and faildLimit.
+You should create a function constructor **'FrontendLab'** which you can call with two arguments **students** and **faildLimit**.
 
 <p></p>
 
@@ -38,4 +38,4 @@ Instance of student should provide the following methods to get or change it's s
 
 <p></p>
 
-**printStudentsEligibleForTest()**: цей метод має реєструвати в консолі список студентів, які не склали більше домашніх завдань, ніж дозволено **FailLimit**.
+**printStudentsEligibleForTest()**: цей метод має реєструвати в консолі список студентів, які вклались у лiмiт більше домашніх завдань, ніж дозволено **FailLimit**.
