@@ -131,14 +131,47 @@
 // student.addHomWorkResult('js', false);
 // console.log(student.homWorkResult);
 
-// import { listOfStudents } from './data.js';
-// import { homeworkResults } from './data.js';
+import { listOfStudents, homeworkResults } from './data.js';
 
 // //? option#2
-const Student = function (studentName, studentEmail) {
-    const name = studentName;
-    const email = studentEmail;
-    const homWorkResult = [];
+// class Student {
+//    #name;
+//    #email;
+//    #hwResults = [];
+
+//    constructor(name, email) {
+//       this.#name = name;
+//       this.#email = email;
+//    }
+
+//    getName() {
+//       return this.#name;
+//    }
+
+//    getEmail() {
+//       return this.#email;
+//    }
+
+//    getHWResults() {
+//       return this.#hwResults;
+//    }
+
+//    addHWResult(topic, succes) {
+//       const result = { topic, succes };
+//       this.#hwResults.push(result);
+//    }
+// }
+
+// const studentAnastasia = new Student('Anastasia', 'belkina23@mail.com');
+
+// console.log(studentAnastasia.getName());
+// console.log(studentAnastasia.getEmail());
+// console.log(studentAnastasia.getHWResults());
+// console.log(studentAnastasia.addHWResult('HTML/CSS', true));
+// console.log(studentAnastasia.getHWResults());
+
+const Student = function (name, email) {
+    const hwResults = [];
 
     this.getName = function () {
         return name;
@@ -148,40 +181,42 @@ const Student = function (studentName, studentEmail) {
         return email;
     };
 
-    this.getHomWorkResult = function () {
-        return homWorkResult;
+    this.getHWResults = function () {
+        return hwResults;
     };
 
-    this.addHomWorkResult = function (topic, success) {
-        homWorkResult.push({ topic, success });
+    this.addHWResult = function (topic, succes) {
+        const result = { topic, succes };
+        hwResults.push(result);
     };
 };
 
-const FrontendLab = function (students, failedList) {
-    const failedHomeWorksLimit = 0;
-    const studentsList = [];
-    const newStudents = listOfStudents.map(
+const FrontendLab = function (students, failedLimit) {
+    const failedHomeworksLimit = 0;
+    const newStudents = students.map(
         ({ name, email }) => new Student(name, email)
     );
 
-    const studentWithResult = this.newStudents.forEach((student) => {
-        homeworkResults.forEach(({ topic, results: { email, success } }) => {
-            if (student.getEmail() === email)
-                student.addHomWorkResult(topic, success);
-        });
-    });
-
-    this.printStudentList = function () {
-        console.log(students);
+    this.printStudentsList = function () {
+        newStudents.map((student) =>
+            console.log(
+                `name: ${student.getName()},\nemail:  ${student.getEmail()},\n${student.getHWResults()}`
+            )
+        );
     };
 
-    this.addHomWorkResult = function (studentResult) {
-        newStudents.forEach((student) =>
-            studentResult.forEach((result) => {
-                if (result.email === student.getEmail()) return {};
-            })
-        );
+    this.addHomeworkresults = function (studentsResult) {
+        newStudents.forEach((student) => {
+            studentsResult.results.forEach((result) => {
+                if (result.email === student.getEmail()) {
+                    student.addHWResult(studentsResult.topic, result.success);
+                }
+            });
+        });
     };
 };
 
-const frontendLab = new FrontendLab(listOfStudents, 1);
+const a = new FrontendLab(listOfStudents, 1);
+
+a.addHomeworkresults(homeworkResults[0]);
+a.printStudentsList();

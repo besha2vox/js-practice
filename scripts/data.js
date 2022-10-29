@@ -268,3 +268,5 @@ const homeworkResults = [
         ],
     },
 ];
+
+export { listOfStudents, homeworkResults };
