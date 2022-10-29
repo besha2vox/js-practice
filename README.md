@@ -1,41 +1,41 @@
 # js-practice
 
-You should create a function constructor _'FrontendLab'_ which you can call with two arguments students and faildLimit.
+You should create a function constructor **'FrontendLab'** which you can call with two arguments students and faildLimit.
 
 <p></p>
 
-Instance of _FrontendLab_ should have 2 property fields: _failedHpmeworksLimit_ and _studentsList_. This fields shold be hidden from user.
+Instance of **FrontendLab** should have 2 property fields: **failedHpmeworksLimit** and **studentsList**. This fields shold be hidden from user.
 Instance of student should provide the following methods to get or change it's state.
 
 <p></p>
 
-_printStudentList()_: this method log to console list of students with their homeworks results.
+**printStudentList()**: this method log to console list of students with their homeworks results.
 
 <p></p>
 
-_addHomeworkResults(homeworkResults)_: this method can be called with argument _homeworkResults_, object with 2 fields: _topic_(string) and _results_(array of objects with 2 fields: _email_(string) and _success_(boolean)). This method should update all student objects in _FrontendLab_ _studentsList_.
+**addHomeworkResults(homeworkResults)**: this method can be called with argument **homeworkResults**, object with 2 fields: **topic**(string) and **results**(array of objects with 2 fields: **email**(string) and **success**(boolean)). This method should update all student objects in **FrontendLab** **studentsList**.
 
 <p></p>
 
-_printStudentsEligibleForTest()_: this method should log to console list of students who didn't fail more homework, than allowed _failedLimit_.
+**printStudentsEligibleForTest()**: this method should log to console list of students who didn't fail more homework, than allowed **failedLimit**.
 
 =============
 
-Ви повинні створити конструктор функції _«FrontendLab»_, який можна викликати за допомогою двох аргументів students і _faildLimit_.
+Ви повинні створити конструктор функції **«FrontendLab»**, який можна викликати за допомогою двох аргументів students і **faildLimit**.
 
 <p></p>
 
-Примірник FrontendLab повинен мати 2 поля властивостей: _failedHpmeworksLimit_ і _studentsList_. Ці поля мають бути приховані від користувача.
+Примірник FrontendLab повинен мати 2 поля властивостей: **failedHpmeworksLimit** і **studentsList**. Ці поля мають бути приховані від користувача.
 Екземпляр студента повинен надавати такі методи, щоб отримати або змінити його стан.
 
-<p></p>
+<p></p>f
 
-_printStudentList()_: цей метод записує на консоль список студентів із результатами виконання домашніх завдань.
-
-<p></p>
-
-_addHomeworkResults(homeworkResults)_: цей метод можна викликати за допомогою аргументу homeworkResults, об’єкта з 2 полями: _topic_(string) і _results_(масив об’єктів із 2 полями: _email_(string) і _success_(boolean)). Цей метод має оновлювати всі об’єкти студентів у _FrontendLab_ _studentsList_.
+**printStudentList()**: цей метод записує на консоль список студентів із результатами виконання домашніх завдань.
 
 <p></p>
 
-_printStudentsEligibleForTest()_: цей метод має реєструвати в консолі список студентів, які не склали більше домашніх завдань, ніж дозволено _FailLimit_.
+**addHomeworkResults(homeworkResults)**: цей метод можна викликати за допомогою аргументу homeworkResults, об’єкта з 2 полями: **topic**(string) і **results**(масив об’єктів із 2 полями: **email**(string) і **success**(boolean)). Цей метод має оновлювати всі об’єкти студентів у **FrontendLab** **studentsList**.
+
+<p></p>
+
+**printStudentsEligibleForTest()**: цей метод має реєструвати в консолі список студентів, які не склали більше домашніх завдань, ніж дозволено **FailLimit**.
