@@ -9,7 +9,7 @@ Instance of student should provide the following methods to get or change it's s
 
 <p></p>
 
-_printStudentList()_: this method log to console list of students with their homeworks results.
+__printStudentList()__ : this method log to console list of students with their homeworks results.
 
 <p></p>
 
