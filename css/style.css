@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -122,62 +126,29 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-#root {
+
+body {
+    padding: 50px;
+    width: 100%;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 30px;
+
     text-align: center;
 }
 
-.left {
-    padding: 15px;
-    width: 40%;
-    height: 100vh;
-    background-color: blueviolet;
-}
-
-.right {
-    padding: 15px;
-    width: 60%;
-    height: 100vh;
-    background-color: yellowgreen;
-}
-
-.list {
+.field {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    gap: 15px;
 }
 
-.list__item {
-    padding: 15px;
-    border: 1px solid #000000;
-    background-color: blanchedalmond;
-}
-
-.title {
-    margin-bottom: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: blueviolet;
-}
-
-.btn {
-    padding: 15px 25px;
-    font-size: 20px;
-    border: 2px solid #000000;
-}
-
-.edit {
-    margin-right: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 15px;
-    font-size: 20px;
-    background-color: blanchedalmond;
+.value {
+    font-size: 36px;
 }
