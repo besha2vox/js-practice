@@ -181,3 +181,30 @@ form {
     font-size: 20px;
     background-color: blanchedalmond;
 }
+
+.notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.notification.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.notification__text {
+    font-size: 26px;
+}
